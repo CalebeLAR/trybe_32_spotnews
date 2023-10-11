@@ -9,13 +9,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <header class="header">
-        <nav>
-            <ul class="header-links">
-                <li><a href="{% url 'home-page' %}">Home</a></li>
-            </ul>
-        </nav>
-    </header>
+    {% block header %} {% endblock %}
     <br>
     {% block content %} {% endblock %}
 </body>

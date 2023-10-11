@@ -5,6 +5,16 @@
     Página Inicial
 {% endblock %}
 
+{% block header %}
+    <header class="header">
+        <nav>
+            <ul class="header-links">
+                <li><a href="{% url 'home-page' %}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+{% endblock %}
+
 {% block content %}
 <section class="news-container">
     {% for new in news %}
