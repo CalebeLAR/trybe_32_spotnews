@@ -1,8 +1,9 @@
 from django.urls import path
 
-from news.views import detais_page, home_page
+from news.views import details_page, home_page, categories_form_page
 
 urlpatterns = [
     path("", home_page, name="home-page"),
-    path("news/<int:id>", detais_page, name="news-details-page"),
+    path("news/<int:id>", details_page, name="news-details-page"),
+    path("categories/", categories_form_page, name="categories-form"),
 ]
