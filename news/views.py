@@ -7,6 +7,11 @@ def home_page(request):
     return render(request, "home.html", context=context)
 
 
-def detais_page(request, id):
+def details_page(request, id):
     context = {"new": News.objects.get(id=id)}
     return render(request, "news_details.html", context=context)
+
+
+def categories_form_page(request, id):
+    context = {"new": News.objects.get(id=id)}
+    return render(request, "categories_form.html", context=context)
