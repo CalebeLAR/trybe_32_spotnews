@@ -1,6 +1,11 @@
 from django.urls import path
 
-from news.views import details_page, home_page, categories_form_page, news_form_page
+from news.views import (
+    details_page,
+    home_page,
+    categories_form_page,
+    news_form_page,
+)
 
 urlpatterns = [
     path("", home_page, name="home-page"),
