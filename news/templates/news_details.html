@@ -18,7 +18,9 @@
 {% block content %}
 <div class="news-detail">
     <h1 class="news-title">{{new.title}}</h1>
-    <img src="{% static new.image.url %}" alt="{{new.image}}">
+    {% if new.image %}
+        <img src="{% static new.image.url %}" alt="{{new.image}}">
+    {% endif %}
     <div>
         <p class="news-content">{{new.content}}</p>
     </div>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Formulário para Nova Notícia
+{% endblock %}
+
+{% block header %}
+    <header class="header">
+        <nav>
+            <ul class="header-links">
+                <li><a href="{% url 'home-page' %}">Home</a></li>
+                <li><a href="{% url 'categories-form' %}">Cadastrar Categorias</a></li>
+                <li><a href="{% url 'news-form' %}">Cadastrar Notícias</a></li>
+            </ul>
+        </nav>
+    </header>
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Adicione uma nova categoria</h1>
+        <form class="news-form" method="post" action="{% url 'news-form' %}" enctype="news-form">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+{% endblock %}
