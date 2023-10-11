@@ -10,7 +10,11 @@
 </head>
 <body>
     <header class="header">
-        {% block header%} {% endblock %}
+        <nav>
+            <ul class="header-links">
+                <li><a href="{% url 'home-page' %}">Home</a></li>
+            </ul>
+        </nav>
     </header>
     <br>
     {% block content %} {% endblock %}
