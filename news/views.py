@@ -27,3 +27,7 @@ def categories_form_page(request):
 
     context = {"form": form}
     return render(request, "categories_form.html", context=context)
+
+
+def news_form_page(request):
+    return render(request, "news_form.html")
