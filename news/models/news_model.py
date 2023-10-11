@@ -6,16 +6,15 @@ from news.models.validators import (
 
 class News(models.Model):
     title = models.CharField(
-        max_length=200,
-        validators=[validate_news_title_field]
-        )
+        max_length=200, validators=[validate_news_title_field]
+    )
     content = models.TextField()
-    author = models.ForeignKey(
-        'Users', on_delete=models.CASCADE
-        )
+    author = models.ForeignKey("Users", on_delete=models.CASCADE)
     created_at = models.DateField()
-    image = models.ImageField(upload_to='img/', blank=True)
-    categories = models.ManyToManyField('Categories')
+    image = models.ImageField(upload_to="img/", blank=True)
+    categories = models.ManyToManyField(
+        "Categories", related_name="news"
+    )
 
     def __str__(self):
         return self.title
