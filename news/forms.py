@@ -44,6 +44,7 @@ class CreateNewsModelForm(forms.ModelForm):
         # Uma label como o valor URL da Imagem;
         # Um input do tipo file com o nome image;
         self.fields["image"].label = "URL da Imagem"
+        # self.fields["image"].upload_to = "img/"
 
         # Múltiplas label sendo seus valores os nomes das categorias cadastradas no banco;  # noqa: E501
         # Múltiplos input do tipo checkbox com o nome categories, cada input ligado a uma label de categoria;  # noqa: E501
@@ -51,3 +52,6 @@ class CreateNewsModelForm(forms.ModelForm):
             queryset=Categories.objects.all(),
             widget=forms.CheckboxSelectMultiple(),
         )
+
+
+print("olá mundo")

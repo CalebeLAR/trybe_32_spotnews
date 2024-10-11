@@ -1,1 +1,12 @@
-.[alldev]
+rich==13.4.1
+typer==0.9.0
+shellingham==1.5.0.post1
+Django==4.2.3
+django-extensions==3.2.3
+django-filter==23.2
+djangorestframework==3.14.0
+Markdown==3.4.4
+markdown-it-py==2.2.0
+mysqlclient==2.2.0
+Pillow==10.0.0
+whitenoise==6.5.0

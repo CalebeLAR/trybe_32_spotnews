@@ -20,7 +20,7 @@
 {% block content %}
     <div>
         <h1>Adicione uma nova categoria</h1>
-        <form class="news-form" method="post" action="{% url 'news-form' %}" enctype="news-form">
+        <form class="news-form" method="post" action="{% url 'news-form' %}" enctype="multipart/form-data">
             {% csrf_token %}
             {{form}}
             <button type="submit">Salvar</button>
